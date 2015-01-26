@@ -17,7 +17,6 @@ module Rackbox
         cookbook       config["template_cookbook"]
         options(
           :user              => node["appbox"]["apps_user"],
-          :control_user => "deploy",
           :group             => node["appbox"]["apps_user"],
           :rack_env          => config["rack_env"],
           :working_directory => app_dir,
@@ -45,6 +44,7 @@ module Rackbox
         cookbook       config["template_cookbook"]
         options(
           :user                 => node["appbox"]["apps_user"],
+          :control_user => "deploy",
           :group                => node["appbox"]["apps_user"],
           :rack_env            => config["rack_env"],
           :smells_like_rack     => true, #::File.exists?(::File.join(app_dir, "config.ru")),
