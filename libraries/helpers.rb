@@ -43,8 +43,7 @@ module Rackbox
         log_template_name  config["template_name"]
         cookbook       config["template_cookbook"]
         options(
-          :user                 => "deploy",
-          :control_user => "deploy",
+          :user                 => node["appbox"]["apps_user"],
           :group                => node["appbox"]["apps_user"],
           :rack_env            => config["rack_env"],
           :smells_like_rack     => true, #::File.exists?(::File.join(app_dir, "config.ru")),
