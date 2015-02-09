@@ -13,6 +13,6 @@ Array(node["rackbox"]["apps"]["unicorn"]).each_with_index do |app, index|
 
   setup_nginx_site(app, app_dir, default_port)
   setup_unicorn_config(app, app_dir, default_port)
-  setup_unicorn_runit(app, app_dir)
+  #setup_unicorn_runit(app, app_dir)
 end
 
