@@ -108,7 +108,7 @@ module Rackbox
         config.each do |key, value|
           send(key, value)
         end
-        notifies :restart, "runit_service[#{app["appname"]}]"
+        #notifies :restart, "runit_service[#{app["appname"]}]"
       end
     end
 
